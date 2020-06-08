@@ -2,10 +2,580 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Test de maquetado</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<title>Test de maquetado</title>	
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<!--Header-->
+<header id="banner">
+	<!--Menú-->
+	<nav class="navbar navbar-expand-lg d-block navbar-dark collapse bg col-md-12 col-lg-12">
+		<!--Iconos-->
+		<div class="col-md-12 col-lg-10" id="iconos">
+			<a href="" class=""><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i></a>
+			<a href="" class=""><i class="fa fa-user fa-lg " aria-hidden="true"></i></a>
+			<a href="" class=""><i class="fa fa-search fa-lg " aria-hidden="true"></i></a>
+		</div>
+		<!--Boton-->
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<!--Logo-->
+		<a href="/" title="" class="navbar-brand d-block"><img class="d-block"id="logo-main" src="assets/logo.svg" alt=""></a>
+		
+		<!--Items menú-->
+		<div class="collapse navbar-collapse justify-content-md-center" id="menu">
+			<ul class="navbar-nav">
+				<li class="active"><a href="#">Sale</a></li>
+				<li><a href="#">E-shop</a></li>
+				<li><a href="#">Lookbook</a></li>
+				<li><a href="#">Campaña</a></li>
+				<li><a href="#">Locales</a></li>
+			</ul>
+		</div>
+	</nav>			
+</header>
+
+<!--Contenido de página-->
+<div class="container" id="contenido">		
+	<div class="row">			
+		<!--Filtros-->
+		<div class="col-md-12 col-lg-3" >
+			<h3>Zapatillas</h3>
+			<hr>
+			<a class="navbar-toggler" type="button" data-toggle="collapse" data-target="#desplegable">
+				<h4>Filtrar</h4>
+			</a>
+			<!--Paneles desplegables-->
+			<div class="collapse panel-group mb-1" id="desplegable">				
+				<!--Panel categoria-->
+				<div class="panel panel-default" >
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" href="#categoria">Categoría</a>
+						</h4>
+					</div>
+					<div id="categoria" class="panel-collapse collapse">
+						<ul class="list-group">
+							<li><a href="#">Zapatillas</a></li>
+							<li><a href="#">Zapatos</a></li>
+							<li><a href="#">Botas</a></li>
+							<li><a href="#">Sandalias</a></li>
+							<li><a href="#">Pantuflas</a></li>
+						</ul>
+					</div>
+				</div>
+				<!--Panel Talle-->
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" href="#talle">Talle</a>
+						</h4>
+					</div>
+					<div id="talle" class="panel-collapse collapse">
+						<ul class="list-group">
+							<li><a href="#">36</a></li>
+							<li><a href="#">38</a></li>
+							<li><a href="#">40</a></li>
+							<li><a href="#">42</a></li>
+							<li><a href="#">44</a></li>
+						</ul>
+					</div>
+				</div>
+				<!--Panel Color-->
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" href="#color">Color</a>
+						</h4>
+					</div>
+					<div id="color" class="panel-collapse collapse">
+						<ul class="list-group">
+							<li><a href="#">Amarillo</a></li>
+							<li><a href="#">Negro</a></li>
+							<li><a href="#">Verde</a></li>
+							<li><a href="#">Azul</a></li>
+							<li><a href="#">Blanco</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>			
+		</div>
+		<!--Productos enlistados-->
+		<div class=" col-md-12 col-lg-9">
+			<div class="row" id="productos">
+				<!--Producto-->
+				<div class="card col-md-12 col-lg-3 m-2">
+					<a type="button" data-toggle="modal" data-target="#modal1">
+						<img src="assets/productos/zapatilla_1.jpg" class="card-img-top" alt="Card image">
+					</a>
+					<div class="card-body">
+						<h5>Zapatilla 1-XFK</h5>
+						<p>$5000</p>
+					</div>
+					<!--Modal de detalle de producto-->
+					<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="modal1" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="modal1">Detalle de Producto</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<img src="assets/productos/zapatilla_1.jpg" class="card-img-top">
+									<div class="card-body">
+										<h6><b>Modelo</b></h6>
+										<h5>Zapatilla 1-XFK</h5>
+										<h6><b>Precio</b></h6>
+										<p>$5000</p>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>					
+				<!--Producto-->
+				<div class="card col-md-12 col-lg-3 m-2">
+					<a type="button" data-toggle="modal" data-target="#modal2">
+						<img src="assets/productos/zapatilla_2.jpg" class="card-img-top" alt="Card image">
+					</a>
+					<div class="card-body">
+						<h5>Zapatilla 2000-X</h5>
+						<p>$9800</p>
+					</div>
+					<!--Modal de detalle de producto-->
+					<div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="modal2" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="modal2">Detalle de Producto</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<img src="assets/productos/zapatilla_2.jpg" class="card-img-top">
+									<div class="card-body">
+										<h6><b>Modelo</b></h6>
+										<h5>Zapatilla 2000-X</h5>
+										<h6><b>Precio</b></h6>
+										<p>$9800</p>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Producto-->
+				<div class="card col-md-12 col-lg-3 m-2">
+					<a type="button" data-toggle="modal" data-target="#modal3">
+						<img src="assets/productos/zapatilla_3.jpg" class="card-img-top" alt="Card image">
+					</a>
+					<div class="card-body">
+						<h5>Zapatilla 3 Run</h5>
+						<p>$6500</p>
+					</div>
+					<!--Modal de detalle de producto-->
+					<div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="modal3" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="modal3">Detalle de Producto</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<img src="assets/productos/zapatilla_3.jpg" class="card-img-top">
+									<div class="card-body">
+										<h6><b>Modelo</b></h6>
+										<h5>Zapatilla 3 Run</h5>
+										<h6><b>Precio</b></h6>
+										<p>$6500</p>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Producto-->
+				<div class="card col-md-12 col-lg-3 m-2">
+					<a type="button" data-toggle="modal" data-target="#modal4">
+						<img src="assets/productos/zapatilla_3.jpg" class="card-img-top" alt="Card image">
+					</a>
+					<div class="card-body">
+						<h5>Zapatilla 3 Run</h5>
+						<p>$6500</p>
+					</div>
+					<!--Modal de detalle de producto-->
+					<div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="modal4" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="modal4">Detalle de Producto</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<img src="assets/productos/zapatilla_3.jpg" class="card-img-top">
+									<div class="card-body">
+										<h6><b>Modelo</b></h6>
+										<h5>Zapatilla 3 Run</h5>
+										<h6><b>Precio</b></h6>
+										<p>$6500</p>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Producto-->
+				<div class="card col-md-12 col-lg-3 m-2">
+					<a type="button" data-toggle="modal" data-target="#modal5">
+						<img src="assets/productos/zapatilla_1.jpg" class="card-img-top" alt="Card image">
+					</a>
+					<div class="card-body">
+						<h5>Zapatilla 1-XFK</h5>
+						<p>$5000</p>
+					</div>
+					<!--Modal de detalle de producto-->
+					<div class="modal fade" id="modal5" tabindex="-1" role="dialog" aria-labelledby="modal5" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="modal5">Detalle de Producto</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<img src="assets/productos/zapatilla_1.jpg" class="card-img-top">
+									<div class="card-body">
+										<h6><b>Modelo</b></h6>
+										<h5>Zapatilla 1-XFK</h5>
+										<h6><b>Precio</b></h6>
+										<p>$5000</p>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Producto-->
+				<div class="card col-md-12 col-lg-3 m-2">
+					<a type="button" data-toggle="modal" data-target="#modal6">
+						<img src="assets/productos/zapatilla_2.jpg" class="card-img-top" alt="Card image">
+					</a>
+					<div class="card-body">
+						<h5>Zapatilla 2000-X</h5>
+						<p>$9800</p>
+					</div>
+					<!--Modal de detalle de producto-->
+					<div class="modal fade" id="modal6" tabindex="-1" role="dialog" aria-labelledby="modal6" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="modal6">Detalle de Producto</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<img src="assets/productos/zapatilla_2.jpg" class="card-img-top">
+									<div class="card-body">
+										<h6><b>Modelo</b></h6>
+										<h5>Zapatilla 2000-X</h5>
+										<h6><b>Precio</b></h6>
+										<p>$9800</p>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Producto-->
+				<div class="card col-md-12 col-lg-3 m-2">
+					<a type="button" data-toggle="modal" data-target="#modal7">
+						<img src="assets/productos/zapatilla_1.jpg" class="card-img-top" alt="Card image">
+					</a>
+					<div class="card-body">
+						<h5>Zapatilla 1-XFK</h5>
+						<p>$5000</p>
+					</div>
+					<!--Modal de detalle de producto-->
+					<div class="modal fade" id="modal7" tabindex="-1" role="dialog" aria-labelledby="modal7" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="modal7">Detalle de Producto</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<img src="assets/productos/zapatilla_1.jpg" class="card-img-top">
+									<div class="card-body">
+										<h6><b>Modelo</b></h6>
+										<h5>Zapatilla 1-XFK</h5>
+										<h6><b>Precio</b></h6>
+										<p>$5000</p>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Producto-->
+				<div class="card col-md-12 col-lg-3 m-2">
+					<a type="button" data-toggle="modal" data-target="#modal8">
+						<img src="assets/productos/zapatilla_2.jpg" class="card-img-top" alt="Card image">
+					</a>
+					<div class="card-body">
+						<h5>Zapatilla 2000-X</h5>
+						<p>$9800</p>
+					</div>
+					<!--Modal de detalle de producto-->
+					<div class="modal fade" id="modal8" tabindex="-1" role="dialog" aria-labelledby="modal8" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="modal8">Detalle de Producto</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<img src="assets/productos/zapatilla_2.jpg" class="card-img-top">
+									<div class="card-body">
+										<h6><b>Modelo</b></h6>
+										<h5>Zapatilla 2000-X</h5>
+										<h6><b>Precio</b></h6>
+										<p>$9800</p>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Producto-->
+				<div class="card col-md-12 col-lg-3 m-2">
+					<a type="button" data-toggle="modal" data-target="#modal9">
+						<img src="assets/productos/zapatilla_3.jpg" class="card-img-top" alt="Card image">
+					</a>
+					<div class="card-body">
+						<h5>Zapatilla 3 Run</h5>
+						<p>$6500</p>
+					</div>
+					<!--Modal de detalle de producto-->
+					<div class="modal fade" id="modal9" tabindex="-1" role="dialog" aria-labelledby="modal9" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="modal9">Detalle de Producto</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<img src="assets/productos/zapatilla_3.jpg" class="card-img-top">
+									<div class="card-body">
+										<h6><b>Modelo</b></h6>
+										<h5>Zapatilla 3 Run</h5>
+										<h6><b>Precio</b></h6>
+										<p>$6500</p>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Producto-->
+				<div class="card col-md-12 col-lg-3 m-2">
+					<a type="button" data-toggle="modal" data-target="#modal10">
+						<img src="assets/productos/zapatilla_2.jpg" class="card-img-top" alt="Card image">
+					</a>
+					<div class="card-body">
+						<h5>Zapatilla 2000-X</h5>
+						<p>$9800</p>
+					</div>
+					<!--Modal de detalle de producto-->
+					<div class="modal fade" id="modal10" tabindex="-1" role="dialog" aria-labelledby="modal10" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="modal10">Detalle de Producto</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<img src="assets/productos/zapatilla_2.jpg" class="card-img-top">
+									<div class="card-body">
+										<h6><b>Modelo</b></h6>
+										<h5>Zapatilla 2000-X</h5>
+										<h6><b>Precio</b></h6>
+										<p>$9800</p>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Producto-->
+				<div class="card col-md-12 col-lg-3 m-2">
+					<a type="button" data-toggle="modal" data-target="#modal11">
+						<img src="assets/productos/zapatilla_3.jpg" class="card-img-top" alt="Card image">
+					</a>
+					<div class="card-body">
+						<h5>Zapatilla 3 Run</h5>
+						<p>$6500</p>
+					</div>
+					<!--Modal de detalle de producto-->
+					<div class="modal fade" id="modal11" tabindex="-1" role="dialog" aria-labelledby="modal11" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="modal11">Detalle de Producto</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<img src="assets/productos/zapatilla_3.jpg" class="card-img-top">
+									<div class="card-body">
+										<h6><b>Modelo</b></h6>
+										<h5>Zapatilla 3 Run</h5>
+										<h6><b>Precio</b></h6>
+										<p>$6500</p>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Producto-->
+				<div class="card col-md-12 col-lg-3 m-2">
+					<a type="button" data-toggle="modal" data-target="#modal12">
+						<img src="assets/productos/zapatilla_1.jpg" class="card-img-top" alt="Card image">
+					</a>
+					<div class="card-body">
+						<h5>Zapatilla 1-XFK</h5>
+						<p>$5000</p>
+					</div>
+					<!--Modal de detalle de producto-->
+					<div class="modal fade" id="modal12" tabindex="-1" role="dialog" aria-labelledby="modal12" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="modal12">Detalle de Producto</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<img src="assets/productos/zapatilla_1.jpg" class="card-img-top">
+									<div class="card-body">
+										<h6><b>Modelo</b></h6>
+										<h5>Zapatilla 1-XFK</h5>
+										<h6><b>Precio</b></h6>
+										<p>$5000</p>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+</div>
+
+
+<!--Footer-->
+<footer class="navbar navbar-expand-lg col-md-12 col-lg-12 d-block">
+	<ul class="navbar-nav justify-content-md-center">
+		<li>
+			<a  href="#">Ayuda</a>
+		</li>
+		<li>
+			<a  href="#">Contacto</a>
+		</li>
+		<li>
+			<a href="#" >Términos y Condiciones</a>
+		</li>
+		<li>
+			<a  href="#">Políticas de privacidad</a>
+		</li>		
+	</ul>
+</footer>
+
+<!--Scripts-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+
+	//Script para el  modal de contenido
+	$('#myModal').on('shown.bs.modal', function () {
+			$('#myInput').trigger('focus')
+		});
+	//Script para el filtro
+	$(document).ready(function () {
+			$("#myInput").on("keyup", function () {
+				var value = $(this).val().toLowerCase();
+				$(".dropdown-menu li").filter(function () {
+					$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+				});
+			});
+		});
+	
+</script>
 </body>
+
 </html>
+ 
