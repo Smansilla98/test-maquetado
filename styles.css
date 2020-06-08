@@ -1,3 +1,328 @@
-body{
-	margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+@media (max-width: 2560px) { 
+
+/*Reglas generales*/
+* {
+	font-family: 'Roboto';
+	padding: 0;
+  	margin: 0;
+}
+
+body, #productos>.card, #categoria>ul * ,#talle>ul * ,#color>ul *{
+	background-color: #fafafa;
+}
+
+#banner, footer{
+	background-color: #100217E6;
+}
+
+ul>li>a, .fa ,footer>ul>li>a {
+	color:#FAFAFA;
+}
+
+/*header*/
+#banner {
+	position: absolute; ;
+	width: 100%;
+	z-index: 100;
+}
+	
+/*menu*/
+ul>li>a{
+	letter-spacing: 0.4px;
+	text-transform: uppercase;
+	opacity:90%;	
+	font-size: 20px;
+	padding-right: 80px;
+}
+
+.navbar-nav>.active>a{
+	color:white;
+	letter-spacing: 0.4px;
+	opacity: 1;
+	text-transform: uppercase;
+}
+nav div a:hover{
+	color: rgb(146, 129, 146);
+	text-decoration-line: none;
+}
+
+/*toggle*/
+.navbar-dark .navbar-toggler
+{
+  border:none;
+  color:white;
+}
+
+/*logo*/
+.navbar-brand{
+	margin-bottom: 0.5%;;
+}
+
+#logo-main{
+	height: 30px;	
+	width: 206px;	
+	margin-left:45%;
+}
+
+
+
+/*iconos*/
+div#iconos{
+	margin-bottom: 1%;
+}
+.fa{
+	width:2%;  
+	float: right;
+	padding-top: 30px;
+}
+
+/* Contenido de la página*/
+#contenido {
+  padding: 6% 0 3%;
+}
+#desplegable * {
+	color:black;
+	font-size:15px;
+	background-color:#E4E8EE;
+	font-weight: bold;
+	text-transform: none;
+	text-indent: 6%;
+	letter-spacing: 0.32px;
+	text-decoration:none;
+	list-style:none;
+}
+hr{
+	height:1px;
+	border-width: 8;
+	color:black;
+	background-color:black;
+	margin-top: 0px;
+}
+
+h3{
+	font-size: 22px;
+	font-weight: bold;
+	letter-spacing: 0.48px;
+	color: #030B1C;
+	text-align-last: left;
+}
+
+a>h4{
+	font-size:22px;
+	font-weight: bold;
+	letter-spacing: 0.4px;
+	color: #030B1C;
+	text-align-last: left;
+	text-indent: -10px;
+}
+#categoria>ul * ,#talle>ul * ,#color>ul * {
+	font-weight: normal;
+	padding: 1px;	
+}
+
+/*productos*/
+#productos>.card{
+	border:none;
+	padding:0px;
+}
+/*productos->texto principal*/
+.card-body{
+	padding:0;
+}
+.card-body>h5{
+	font-weight: normal;
+	font-size: 15px;
+}
+
+/*productos->texto secundario*/
+.card-body>p{
+	font-weight: bold;
+	font-size: 15px;
+}
+
+/*imagenes*/
+
+a>.card-img-top{
+	border-bottom-color:black;
+	border-bottom-style: solid;
+	border-bottom-width: thin;
+}
+
+/*footer*/
+footer>ul>li>a{
+	font-size:15px;
+	opacity: 75%;
+	letter-spacing: 0.32px;
+	text-transform: none;
+}
+
+footer>ul>li>a:hover{
+	text-decoration: none;
+	color:rgb(190, 190, 190);
+}
+
+
+}
+
+@media(max-width: 2560px){
+#contenido {
+  padding: 8% 0 3%;
+}
+}
+
+@media(max-width: 1024px){
+#logo-main {
+    height: 30px;
+    width: 206px;
+    margin-left: 40%;
+}
+div#iconos {
+    margin-bottom: 1%;
+    margin-left: 7%;
+}
+.fa {
+    float: right;
+    padding-top: 30px;
+    width: 3%;
+}
+#contenido {
+  padding: 12% 0 3%;
+}
+}
+
+
+@media (max-width: 768px){
+
+body, #productos>.card, #categoria>ul * ,#talle>ul * ,#color>ul *{
+	background-color: #ffffff;
+}
+
+#banner{
+	position: static;
+	width: 100%;
+}
+.d-block {
+    display: inline-block!important;
+}
+div#iconos{
+	margin-left: 0;
+}
+
+#contenido {
+  margin: 6px;
+  width: 100%; 
+}
+img#logo-main{
+    height: 40px;    
+}
+#logo-main {
+    margin-left: 70%;
+}
+/* Contenido de la página*/
+#contenido {
+  padding: 2% 0 3%;
+}
+
+.card-body>h5{
+	font-weight: normal;
+	font-size: 20px;
+	margin: 0px;
+}
+.card-body>p {
+    font-weight: bold;
+    font-size: 20px;
+}
+a>.card-img-top{
+	margin-bottom:5px;
+}
+
+
+footer>ul>li{
+    margin: auto;
+	padding:3px;
+}
+ul>li>a {
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    opacity: 90%;
+	font-size: 20px;
+	padding-right: 0px;
+}
+.fa {
+    width: 4%;
+	float: right;
+	padding-top: 3%;
+	font-size: 30px;
+}
+
+a>h4{
+	opacity: 0%;
+	
+}
+
+#productos>.card{
+    padding: 10px;
+}
+
+
+h3 {
+	font-size: 29px;}
+}
+
+@media(max-width: 425px ){
+
+img#logo-main{
+	height: 20px;
+}
+
+.navbar-brand {
+   margin-right:auto;
+}
+#contenido {
+    margin: 6px;
+    width: 90%;
+}
+#logo-main{
+	margin-left: 10px;
+}
+
+.fa-search , .fa-user{
+	opacity: 0%;
+}
+}
+
+@media(max-width:366px){
+footer.d-block{
+	display: block!important;
+}
+.d-block {
+    display: flex!important;
+}
+img#logo-main {
+    height: 20px;
+    margin: 0;
+}
+.navbar {
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+div#iconos {
+    margin-bottom: -8%;
+    margin-left: 7%;
+}
+
+.fa {
+    width: 10%;
+    float: right;
+    padding-top: 5%;
+    font-size: 30px;
+}
+#banner {
+    position: static;
+    width: 100%;
+    padding: 5px;
+}
 }
